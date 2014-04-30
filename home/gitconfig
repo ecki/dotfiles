@@ -1,0 +1,45 @@
+[alias]
+	lol = log --graph --oneline --decorate
+	pu = pull --ff-only -v
+	br = branch -v -v -a
+	st = status -s -b -unormal
+	fe = fetch --all -v --progress -p
+
+[user]
+	email = bernd@eckenfels.net
+	name = Bernd Eckenfels
+
+[core]
+	symlinks = false
+	autocrlf = input
+	eol = lf
+	safecrlf = true
+
+[color]
+	diff = auto
+	status = auto
+	grep = auto
+	branch = auto
+	interactive = true
+	ui = true
+
+[pack]
+	packSizeLimit = 2g
+
+[help]
+	format = html
+
+[diff "astextplain"]
+	textconv = astextplain
+
+[branch]
+	autosetuprebase=remote
+
+[rebase]
+	autosquash = true
+
+[push]
+	default = upstream
+
+[http]
+	sslVerify = false
