@@ -1,0 +1,5 @@
+keyfile ~/.tarsnap/tarsnapkey.key
+cachedir ~/.tarsnap/cache
+nodump ~/.tarsnap/
+humanize-numbers
+print-stats
