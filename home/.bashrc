@@ -1,9 +1,22 @@
 # Prompt
 export PS1='\u@\h \w\$ '
 
-unset SHELLOPTS BASHOPTS ENV BASH_ENV INPUTRC
+unset ENV BASH_ENV INPUTRC
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export CDPATH=".:$HOME"
+
+# Safer file handling
+set -o noclobber        # prevent > from overwriting files
+set -o nounset          # error on unset variables
+set -o errexit          # exit on command failure
+set -o pipefail         # catch failures in pipelines
+
+# Avoid history/control characters from being expanded
+set +o histexpand
+
+# Disable programmable completion if not needed (less attack surface)
+complete -r
+
 
 # TODO: find first existing
 export EDITOR=nano
