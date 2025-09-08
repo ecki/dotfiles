@@ -1,7 +1,7 @@
 # Prompt
 export PS1='\u@\h \w\$ '
 
-unset SHELLOPTS BASHOPTS ENV BASH_ENV
+unset SHELLOPTS BASHOPTS ENV BASH_ENV INPUTRC
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export CDPATH=".:$HOME"
 
