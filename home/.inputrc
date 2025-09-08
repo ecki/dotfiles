@@ -1,0 +1,43 @@
+# readline / bash
+
+# noise canceling
+set bell-style none
+
+# color
+set colored-completion-prefix on
+set colored-stats on
+
+# Enable case-insensitive completion
+set completion-ignore-case on
+
+# Show all matches immediately instead of ringing the bell
+set show-all-if-ambiguous on
+
+# Display matches horizontally (saves space)
+set print-completions-horizontally on
+
+# Ignore duplicate entries in history
+set skip-completed-text on
+
+# Prevent readline from adding duplicate history entries
+set history-preserve-point on
+
+# Search history as you type (like zsh incremental search)
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Make Home/End work correctly
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
+# Ctrl-left/right to move by word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Delete word with Ctrl-Backspace
+"\C-h": backward-kill-word
+
+# Tab completion with visible menu
+set menu-complete-display-prefix on
+TAB: menu-complete
+#"\e[Z": menu-complete-backward
