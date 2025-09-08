@@ -31,3 +31,10 @@ alias dr='screen -d -R -a -A -O'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+# bash options
+shopt -s cdable_vars cdspell autocd
+shopt -s globskipdots extglob failglob globstar
+# safe
+shopt -s globasciiranges
+shopt -u nocasematch dotglob nullglob
+
