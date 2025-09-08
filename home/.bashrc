@@ -1,6 +1,7 @@
 # Prompt
 export PS1='\u@\h \w\$ '
 
+unset SHELLOPTS BASHOPTS ENV BASH_ENV
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 export CDPATH=".:$HOME"
 
@@ -35,6 +36,7 @@ alias ...='cd ../..'
 shopt -s cdable_vars cdspell autocd
 shopt -s globskipdots extglob failglob globstar
 # safe
+export GLOBIGNORE=.git:.env:.secret
 shopt -s globasciiranges
 shopt -u nocasematch dotglob nullglob
 
