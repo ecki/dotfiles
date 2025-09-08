@@ -5,10 +5,8 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sb
 export CDPATH=".:$HOME"
 
 # TODO: find first existing
-export EDITOR=joe
+export EDITOR=nano
 export PAGER=less
-
-export IRCNAME="eckes dot Org"
 
 # GNU tools
 export COLOR=auto
@@ -30,3 +28,6 @@ alias l='ls -lhF'
 alias ld='ls -dFh'
 alias g='egrep -i --color=auto'
 alias dr='screen -d -R -a -A -O'
+alias ..='cd ..'
+alias ...='cd ../..'
+
