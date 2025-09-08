@@ -28,13 +28,13 @@
 	packSizeLimit = 2g
 
 [help]
-	format = html
+	format = man
 
 [diff "astextplain"]
 	textconv = astextplain
 
 [branch]
-	autosetuprebase=remote
+	autosetuprebase = remote
 
 [rebase]
 	autosquash = true
