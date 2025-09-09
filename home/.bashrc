@@ -3,7 +3,7 @@ export PS1='\u@\h \w\$ '
 
 unset ENV BASH_ENV INPUTRC
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-export CDPATH=".:$HOME"
+export CDPATH=".:$HOME:$HOME/git"
 
 # Safer file handling
 set -o noclobber        # prevent > from overwriting files
@@ -36,10 +36,11 @@ alias m=$PAGER
 alias ll='ls -laFoh'
 alias l='ls -lhF'
 alias ld='ls -dFh'
-alias g='egrep -i --color=auto'
+alias g='egrep -P -l -i --color=auto'
 alias dr='screen -d -R -a -A -O'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias gir=git
 
 # bash options
 shopt -s cdable_vars cdspell autocd
