@@ -41,6 +41,7 @@ alias dr='screen -d -R -a -A -O'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias gir=git
+alias r='fc -s'
 
 # bash options
 shopt -s cdable_vars cdspell autocd
