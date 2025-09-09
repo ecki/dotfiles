@@ -1,5 +1,13 @@
+# .bashrc Bernd Eckenfels
+
+export TERM=${TERM:-linux}
+
 # Prompt
-export PS1='\u@\h \w\$ '
+green=$(tput setaf 46)
+strong=$(tput bold)
+norm=$(tput -Tlinux sgr0)
+export PS1="${green}\\u${norm}@\\h ${strong}\w\$${norm} "
+export PROMPT_DIRTRIM=3
 
 unset ENV BASH_ENV INPUTRC
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
@@ -31,17 +39,19 @@ set -o emacs
 
 # some useful aliases
 alias h='fc -l'
+alias r='fc -s'
 alias j=jobs
 alias m=$PAGER
 alias ll='ls -laFoh'
 alias l='ls -lhF'
 alias ld='ls -dFh'
-alias g='egrep -P -l -i --color=auto'
+alias g='grep -H -P -a -n -i --color=auto'
 alias dr='screen -d -R -a -A -O'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias cd..='cd ..'
+alias cd-='cd -'
 alias gir=git
-alias r='fc -s'
 
 # bash options
 shopt -s cdable_vars cdspell autocd
